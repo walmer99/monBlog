@@ -41,6 +41,4 @@ class BlogController extends AbstractController
         return $this->render('blog/test.html.twig', ['test' => "test"
         ] );
     }
-
-
 }
