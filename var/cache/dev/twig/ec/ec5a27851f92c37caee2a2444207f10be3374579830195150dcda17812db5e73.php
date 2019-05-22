@@ -62,11 +62,11 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
     <nav class=\"navbar navbar-expand-lg navbar-light bg-primary\">
         <a class=\"navbar-brand text-light\" href=\"";
         // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_list");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_index");
         echo "\">Blog.</a>
         <a class=\"navbar-brand text-light\" href=\"";
         // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">Tous mes articles</a>
     </nav>
 </header>
@@ -204,8 +204,8 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 <body>
 <header>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-primary\">
-        <a class=\"navbar-brand text-light\" href=\"{{ path('blog_list')}}\">Blog.</a>
-        <a class=\"navbar-brand text-light\" href=\"{{ path('show')}}\">Tous mes articles</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('app_index')}}\">Blog.</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('index')}}\">Tous mes articles</a>
     </nav>
 </header>
 <h1> {% block h1 %}{% endblock %}
@@ -213,6 +213,6 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 {% block javascripts %}{% endblock %}
 </body>
 </html>
-", "base.html.twig", "/var/www/html/queteBlog1/templates/base.html.twig");
+", "base.html.twig", "/var/www/html/monBlog/templates/base.html.twig");
     }
 }

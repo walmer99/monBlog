@@ -11,16 +11,11 @@
                     '/blog/show/{slug}',
                 ],
                 'name' => [
-                    'show',
-                ],
-                'requirements' => [
-                    [
-                        'slug' => '[a-z0-9-]+',
-                    ],
+                    'blog_show',
                 ],
                 'defaults' => [
                     [
-                        'slug' => 'Article Sans Titre',
+                        'slug' => null,
                     ],
                 ],
             ],
