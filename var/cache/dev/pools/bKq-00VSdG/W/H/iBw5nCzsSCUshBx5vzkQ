@@ -8,7 +8,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/blog/category/{categoryName}',
+                    '/blog/categoryParam/{name}',
                 ],
                 'name' => [
                     'show_category',

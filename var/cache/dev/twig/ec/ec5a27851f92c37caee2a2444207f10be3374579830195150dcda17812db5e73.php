@@ -74,7 +74,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
         echo "\">Test</a>
         <a class=\"navbar-brand text-light\" href=\"";
         // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_category", ["categoryName" => "javascript"]);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_category", ["name" => "javascript"]);
         echo "\">Selecao</a>
     </nav>
 </header>
@@ -217,7 +217,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
         <a class=\"navbar-brand text-light\" href=\"{{ path('app_index')}}\">Blog</a>
         <a class=\"navbar-brand text-light\" href=\"{{ path('index')}}\">Tous mes articles</a>
         <a class=\"navbar-brand text-light\" href=\"{{ path('test')}}\">Test</a>
-        <a class=\"navbar-brand text-light\" href=\"{{ path('show_category',{'categoryName':'javascript'})}}\">Selecao</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('show_category',{'name':'javascript'})}}\">Selecao</a>
     </nav>
 </header>
 <h1> {% block h1 %}{% endblock %}
