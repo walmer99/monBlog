@@ -63,25 +63,35 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
         <a class=\"navbar-brand text-light\" href=\"";
         // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_index");
-        echo "\">Blog.</a>
+        echo "\">Blog</a>
         <a class=\"navbar-brand text-light\" href=\"";
         // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">Tous mes articles</a>
+        <a class=\"navbar-brand text-light\" href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("test");
+        echo "\">Test</a>
+        <a class=\"navbar-brand text-light\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_category", ["categoryName" => "javascript"]);
+        echo "\">Selecao</a>
     </nav>
 </header>
 <h1> ";
-        // line 16
-        $this->displayBlock('h1', $context, $blocks);
-        // line 17
-        echo "</h1>        ";
-        $this->displayBlock('body', $context, $blocks);
         // line 18
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('h1', $context, $blocks);
         // line 19
+        echo "</h1>
+";
+        // line 20
+        $this->displayBlock('body', $context, $blocks);
+        // line 21
         echo "</body>
 </html>
 ";
+        // line 23
+        $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -125,7 +135,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 
     }
 
-    // line 16
+    // line 18
     public function block_h1($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -142,7 +152,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 
     }
 
-    // line 17
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -159,7 +169,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 
     }
 
-    // line 18
+    // line 23
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -188,7 +198,7 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 
     public function getDebugInfo()
     {
-        return array (  163 => 18,  146 => 17,  129 => 16,  112 => 7,  94 => 5,  82 => 19,  80 => 18,  77 => 17,  75 => 16,  69 => 13,  65 => 12,  59 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  173 => 23,  156 => 20,  139 => 18,  122 => 7,  104 => 5,  94 => 23,  90 => 21,  88 => 20,  85 => 19,  83 => 18,  77 => 15,  73 => 14,  69 => 13,  65 => 12,  59 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -204,15 +214,18 @@ class __TwigTemplate_ac65b960a81cc28e41fe7a10cc7a865a7273843b9847b02d34204f1eb33
 <body>
 <header>
     <nav class=\"navbar navbar-expand-lg navbar-light bg-primary\">
-        <a class=\"navbar-brand text-light\" href=\"{{ path('app_index')}}\">Blog.</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('app_index')}}\">Blog</a>
         <a class=\"navbar-brand text-light\" href=\"{{ path('index')}}\">Tous mes articles</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('test')}}\">Test</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('show_category',{'categoryName':'javascript'})}}\">Selecao</a>
     </nav>
 </header>
 <h1> {% block h1 %}{% endblock %}
-</h1>        {% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+</h1>
+{% block body %}{% endblock %}
 </body>
 </html>
+{% block javascripts %}{% endblock %}
 ", "base.html.twig", "/var/www/html/monBlog/templates/base.html.twig");
     }
 }

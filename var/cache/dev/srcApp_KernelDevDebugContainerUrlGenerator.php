@@ -35,6 +35,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'index' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/blog/index']], [], []],
         'blog_show' => [['slug'], ['slug' => null, '_controller' => 'App\\Controller\\BlogController::show'], [], [['variable', '/', '[^/]++', 'slug', true], ['text', '/blog/show']], [], []],
         'show_category' => [['categoryName'], ['_controller' => 'App\\Controller\\BlogController::showByCategory'], [], [['variable', '/', '[^/]++', 'categoryName', true], ['text', '/blog/category']], [], []],
+        'test' => [[], ['_controller' => 'App\\Controller\\BlogController::test'], [], [['text', '/blog/test']], [], []],
         'app_index' => [[], ['_controller' => 'App\\Controller\\DefaultController::index'], [], [['text', '/']], [], []],
     ];
         }
