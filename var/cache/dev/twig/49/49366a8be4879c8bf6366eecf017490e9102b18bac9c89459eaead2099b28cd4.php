@@ -80,20 +80,29 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("show_category", ["name" => "javascript"]);
         echo "\">Selecao</a>
+        <a class=\"navbar-brand text-light\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addCategory");
+        echo "\">Add category</a>
+
     </nav>
 </header>
 <h1> ";
-        // line 19
+        // line 21
         $this->displayBlock('h1', $context, $blocks);
-        // line 20
-        echo "</h1>
-<footer> <nav class=\"navbar navbar-expand-lg navbar-light bg-primary\"></footer>
-";
         // line 22
-        $this->displayBlock('body', $context, $blocks);
+        echo "</h1>
+";
         // line 23
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 24
+        echo "<footer><nav class=\"navbar fixed-bottom navbar-light bg-light\">
+        <a class=\"navbar-brand\" href=\"#\">Fixed bottom</a>
+    </nav></footer>
+";
+        // line 27
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 28
         echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
 </body>
@@ -143,7 +152,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     }
 
-    // line 19
+    // line 21
     public function block_h1($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -160,7 +169,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     }
 
-    // line 22
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -177,7 +186,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     }
 
-    // line 23
+    // line 27
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -206,7 +215,7 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
 
     public function getDebugInfo()
     {
-        return array (  181 => 23,  164 => 22,  147 => 19,  130 => 8,  112 => 5,  97 => 24,  95 => 23,  93 => 22,  89 => 20,  87 => 19,  81 => 16,  77 => 15,  73 => 14,  69 => 13,  63 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  190 => 27,  173 => 23,  156 => 21,  139 => 8,  121 => 5,  106 => 28,  104 => 27,  99 => 24,  97 => 23,  94 => 22,  92 => 21,  85 => 17,  81 => 16,  77 => 15,  73 => 14,  69 => 13,  63 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -227,12 +236,16 @@ class __TwigTemplate_bd2491052d9a6570abc0030baece97b641fe7e731ed136658dd059858a4
         <a class=\"navbar-brand text-light\" href=\"{{ path('index')}}\">Tous mes articles</a>
         <a class=\"navbar-brand text-light\" href=\"{{ path('test')}}\">Test</a>
         <a class=\"navbar-brand text-light\" href=\"{{ path('show_category',{'name':'javascript'})}}\">Selecao</a>
+        <a class=\"navbar-brand text-light\" href=\"{{ path('addCategory')}}\">Add category</a>
+
     </nav>
 </header>
 <h1> {% block h1 %}{% endblock %}
 </h1>
-<footer> <nav class=\"navbar navbar-expand-lg navbar-light bg-primary\"></footer>
 {% block body %}{% endblock %}
+<footer><nav class=\"navbar fixed-bottom navbar-light bg-light\">
+        <a class=\"navbar-brand\" href=\"#\">Fixed bottom</a>
+    </nav></footer>
 {% block javascripts %}{% endblock %}
 {{ encore_entry_script_tags('app') }}
 </body>

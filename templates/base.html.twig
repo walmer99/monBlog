@@ -14,11 +14,16 @@
         <a class="navbar-brand text-light" href="{{ path('index')}}">Tous mes articles</a>
         <a class="navbar-brand text-light" href="{{ path('test')}}">Test</a>
         <a class="navbar-brand text-light" href="{{ path('show_category',{'name':'javascript'})}}">Selecao</a>
+        <a class="navbar-brand text-light" href="{{ path('addCategory')}}">Add category</a>
+
     </nav>
 </header>
 <h1> {% block h1 %}{% endblock %}
 </h1>
 {% block body %}{% endblock %}
+<footer><nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="#">Fixed bottom</a>
+    </nav></footer>
 {% block javascripts %}{% endblock %}
 {{ encore_entry_script_tags('app') }}
 </body>
