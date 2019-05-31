@@ -81,23 +81,23 @@ class __TwigTemplate_25deb2a2e3443f269b3faf1f62f1305a58570fbe612682560147aa4913b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Article</h1>
+        echo "    <main id=\"edit_article\"><h1>Edit Article</h1>
+
 
     ";
-        // line 8
+        // line 9
         echo twig_include($this->env, $context, "article/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
-        // line 10
+        // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_index");
         echo "\">back to list</a>
 
     ";
-        // line 12
+        // line 13
         echo twig_include($this->env, $context, "article/_delete_form.html.twig");
-        echo "
-";
+        echo "</main>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -118,7 +118,7 @@ class __TwigTemplate_25deb2a2e3443f269b3faf1f62f1305a58570fbe612682560147aa4913b
 
     public function getDebugInfo()
     {
-        return array (  98 => 12,  93 => 10,  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  99 => 13,  94 => 11,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -128,13 +128,14 @@ class __TwigTemplate_25deb2a2e3443f269b3faf1f62f1305a58570fbe612682560147aa4913b
 {% block title %}Edit Article{% endblock %}
 
 {% block body %}
-    <h1>Edit Article</h1>
+    <main id=\"edit_article\"><h1>Edit Article</h1>
+
 
     {{ include('article/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href=\"{{ path('article_index') }}\">back to list</a>
 
-    {{ include('article/_delete_form.html.twig') }}
+    {{ include('article/_delete_form.html.twig') }}</main>{#main#nom de l'id#}
 {% endblock %}
 ", "article/edit.html.twig", "/var/www/html/monBlog/templates/article/edit.html.twig");
     }
