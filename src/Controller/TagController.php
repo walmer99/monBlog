@@ -3,29 +3,27 @@
 
 namespace App\Controller;
 
+Use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+Use Symfony\Component\HttpFoundation\Response;
+Use Symfony\Component\Routing\Annotation\Route;
+Use App\Entity\Tag ;
 
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-
-/**
- * Class TagController
- * @package App\Controller
- * @Route("/blog/tag/{name}")
- */
 
 class TagController extends AbstractController
 {
 /**
- * @Route
+ * @Route("/blog/tag/{name}", name = "blog_tag")
+ * @return Response
  */
 
-public function index(): Response
+public function showByTag (Tag $tag): Response
 {
-    return $this->render('blog/tag.html.Twig',
-        ['tag' => $tags],
-        )
+    $article = $tag->getArticles();
+    return $this->render(
+        'blog/tag.html.twig',
+        ['articles' => $article, 'tag' => $tag]
+    );
 }
 }

@@ -19,9 +19,9 @@ class Tag
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\article", inversedBy="tags")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Article", inversedBy="tags")
      */
-    private $artciles;
+    private $articles;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -30,7 +30,7 @@ class Tag
 
     public function __construct()
     {
-        $this->artciles = new ArrayCollection();
+        $this->articles = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -41,24 +41,24 @@ class Tag
     /**
      * @return Collection|article[]
      */
-    public function getArtciles(): Collection
+    public function getArticles(): Collection
     {
-        return $this->artciles;
+        return $this->articles;
     }
 
-    public function addArtcile(article $artcile): self
+    public function addArticle(article $article): self
     {
-        if (!$this->artciles->contains($artcile)) {
-            $this->artciles[] = $artcile;
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
         }
 
         return $this;
     }
 
-    public function removeArtcile(article $artcile): self
+    public function removeArticle(article $article): self
     {
-        if ($this->artciles->contains($artcile)) {
-            $this->artciles->removeElement($artcile);
+        if ($this->articles->contains($article)) {
+            $this->articles->removeElement($article);
         }
 
         return $this;

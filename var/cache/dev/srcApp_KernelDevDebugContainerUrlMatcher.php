@@ -52,6 +52,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                         .')'
                         .'|show(?:/([^/]++))?(*:245)'
                         .'|categoryParam/([^/]++)(*:275)'
+                        .'|tag/([^/]++)(*:295)'
                     .')'
                 .')/?$}sDu',
         ];
@@ -68,6 +69,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             218 => [[['_route' => 'article_delete', '_controller' => 'App\\Controller\\ArticleController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
             245 => [[['_route' => 'blog_show', 'slug' => null, '_controller' => 'App\\Controller\\BlogController::show'], ['slug'], null, null, false, true, null]],
             275 => [[['_route' => 'show_category', '_controller' => 'App\\Controller\\BlogController::showByCategory'], ['name'], null, null, false, true, null]],
+            295 => [[['_route' => 'blog_tag', '_controller' => 'App\\Controller\\TagController::showByTag'], ['name'], null, null, false, true, null]],
         ];
     }
 }

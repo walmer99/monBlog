@@ -705,3 +705,15 @@ b7c36a,127.0.0.1,GET,http://localhost:8001/blog,1559314208,,404
 49f6b8,127.0.0.1,GET,http://localhost:8001/favicon.ico,1559314214,9890dd,200
 9890dd,127.0.0.1,GET,http://localhost:8001/favicon.ico,1559314214,,404
 07b02e,127.0.0.1,GET,http://localhost:8001/blog/index,1559314218,,200
+2bf2ad,127.0.0.1,GET,http://localhost:8000/blog/tag,1559548836,8ac0d2,200
+8ac0d2,127.0.0.1,GET,http://localhost:8000/blog/tag,1559548836,,404
+1158d6,127.0.0.1,GET,http://localhost:8000/blog/tag/but,1559548860,56b5ff,200
+56b5ff,127.0.0.1,GET,http://localhost:8000/blog/tag/but,1559548860,,500
+9cc9bf,127.0.0.1,GET,http://localhost:8000/blog/tag/but,1559549017,76b9f5,200
+76b9f5,127.0.0.1,GET,http://localhost:8000/blog/tag/but,1559549017,,500
+9875bd,127.0.0.1,GET,http://localhost:8000/blog/tag/but,1559549088,,200
+074a94,127.0.0.1,GET,http://localhost:8000/blog/tag/l%C3%A9gende,1559549256,,200
+a9476f,127.0.0.1,GET,http://localhost:8000/blog/tag/championnat,1559549264,,200
+d4c69d,127.0.0.1,GET,http://localhost:8000/blog/tag/drive,1559549278,,200
+dfe06b,127.0.0.1,GET,http://localhost:8000/blog/tag/eagle,1559549308,,200
+1dbd9f,127.0.0.1,GET,http://localhost:8000/blog/tag/coupe,1559549329,,200
