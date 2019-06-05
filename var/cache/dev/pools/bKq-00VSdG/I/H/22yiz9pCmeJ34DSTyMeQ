@@ -11,7 +11,7 @@
                     'App\\Entity\\Tag',
                 ],
                 'mappedBy' => [
-                    'artciles',
+                    'articles',
                 ],
             ],
         ],

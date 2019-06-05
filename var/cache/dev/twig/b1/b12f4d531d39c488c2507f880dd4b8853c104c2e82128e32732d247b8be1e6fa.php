@@ -62,7 +62,7 @@ class __TwigTemplate_d85e81f7588c26cdec4e7636b7d87b3993d3e34b21bbfe1a967a4a697c3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
-        echo "<h1>Tag admin</h1>
+        echo "<h1>Add category</h1>
     <section>";
         // line 4
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form');
@@ -95,7 +95,7 @@ class __TwigTemplate_d85e81f7588c26cdec4e7636b7d87b3993d3e34b21bbfe1a967a4a697c3
     {
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
-<h1>Tag admin</h1>
+<h1>Add category</h1>
     <section>{{ form(form) }}</section>
 {% endblock %}", "blog/addCategory.html.twig", "/var/www/html/monBlog/templates/blog/addCategory.html.twig");
     }
